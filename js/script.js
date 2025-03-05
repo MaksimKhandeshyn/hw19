@@ -26,6 +26,27 @@ function inputFunct(event) {
   console.log(event.currentTarget.value);
   spanElement.textContent = event.currentTarget.value;
   if (event.currentTarget.value == "") {
-    event.currentTarget.value == "незнайомець";
+    spanElement.textContent == "незнайомець";
   }
 }
+
+const validatorElement = document.querySelector("#validation-input");
+validatorElement.addEventListener("focus", (event) => {
+  const valueElement = event.currentTarget.value;
+  if (valueElement.length === 6) {
+    console.log(valueElement);
+    validatorElement.style.border = "2px solid green";
+  } else {
+    validatorElement.style.border = "2px solid red";
+  }
+});
+
+//--3--
+
+const controlEl = document.querySelector("#font-size-control");
+const spanEl = document.querySelector("#text");
+const textElem = parseInt(spanEl.style.fontSize);
+
+controlEl.addEventListener("input", (event) => {});
+
+console.log(textElem);
