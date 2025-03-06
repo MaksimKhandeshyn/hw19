@@ -45,8 +45,10 @@ validatorElement.addEventListener("focus", (event) => {
 
 const controlEl = document.querySelector("#font-size-control");
 const spanEl = document.querySelector("#text");
-const textElem = parseInt(spanEl.style.fontSize);
-
-controlEl.addEventListener("input", (event) => {});
-
-console.log(textElem);
+console.log(spanEl.style);
+controlEl.addEventListener("input", controlSizeOfText);
+function controlSizeOfText(event) {
+  const inputEl = event.currentTarget.value + "px";
+  spanEl.style.fontSize = inputEl;
+  console.log(spanEl.style.fontSize);
+}
