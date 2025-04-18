@@ -31,7 +31,7 @@ function inputFunct(event) {
 }
 
 const validatorElement = document.querySelector("#validation-input");
-validatorElement.addEventListener("focus", (event) => {
+validatorElement.addEventListener("blur", (event) => {
   const valueElement = event.currentTarget.value;
   if (valueElement.length === 6) {
     console.log(valueElement);
